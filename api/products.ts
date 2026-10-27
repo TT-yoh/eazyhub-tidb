@@ -1,4 +1,4 @@
-import { db } from './db'
+import { db } from './db.js'
 import crypto from 'crypto'
 
 export default async function handler(req: any, res: any) {
