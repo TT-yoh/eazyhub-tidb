@@ -35,8 +35,8 @@ export function useAdminAuth() {
   // user.publicMetadata.role
   // user.publicMetadata.company_id
   
-  const role = (user.publicMetadata.role as string) || 'admin' // Defaulting to admin for local testing
-  const companyId = (user.publicMetadata.company_id as number) || 3
+  const role = (user.publicMetadata?.role as string) || null
+  const companyId = (user.publicMetadata?.company_id as number) || null
 
   return {
     isAdmin: role === 'admin' || role === 'mineazy_admin' || role === 'farmeazy_admin' || role === 'super_admin',
